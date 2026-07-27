@@ -60,7 +60,8 @@
   .statement{border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
   .statement p{font-family:'Fraunces',serif;font-weight:400;font-size:clamp(1.5rem,3.2vw,2.3rem);line-height:1.4;color:var(--ink);max-width:24ch;margin:0 auto;text-align:center}
   .statement p .hl{color:var(--red);font-style:italic}
-  .innov-row{display:flex;gap:clamp(1.5rem,4vw,3.5rem);justify-content:center;flex-wrap:wrap;margin-top:clamp(40px,5vw,64px)}
+  .innov-row{display:flex;gap:clamp(1.5rem,4vw,3.5rem);justify-content:center;flex-wrap:wrap}
+  .statement .innov-row + p{margin-top:clamp(48px,6vw,72px)}
   .innov{max-width:230px;text-align:center}
   .innov .ic{width:46px;height:46px;border-radius:50%;border:1.5px solid var(--red);color:var(--red);display:grid;place-items:center;margin:0 auto 1.1rem}
   .innov .ic svg{width:22px;height:22px;fill:none;stroke:var(--red);stroke-width:1.6}
@@ -95,13 +96,27 @@
   .lead-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(1.5rem,3vw,2.5rem);max-width:920px;margin:0 auto}
   @media(max-width:780px){.lead-grid{grid-template-columns:1fr;max-width:420px}}
   .lead{text-align:center}
-  .lead .avatar{width:84px;height:84px;border-radius:50%;margin:0 auto 1.2rem;display:grid;place-items:center;font-family:'Fraunces',serif;font-size:1.9rem;color:#fff;background:linear-gradient(150deg,var(--red-soft),var(--red-dark))}
+  .lead .avatar{width:84px;height:84px;border-radius:50%;margin:0 auto 1.2rem;overflow:hidden;display:grid;place-items:center;font-family:'Fraunces',serif;font-size:1.9rem;color:#fff;background:linear-gradient(150deg,var(--red-soft),var(--red-dark))}
+  .lead .avatar img{width:100%;height:100%;object-fit:cover;display:block}
   .lead .role{font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--red)}
   .lead h3{font-size:1.35rem;color:var(--ink);margin:.35rem 0 .4rem;font-weight:600}
   .lead .aff{font-size:.9rem;color:var(--muted);max-width:26ch;margin:0 auto}
   .commission-foot{text-align:center;margin-top:clamp(48px,6vw,72px);padding-top:clamp(36px,4vw,48px);border-top:1px solid var(--line);color:var(--muted)}
   .commission-foot strong{color:var(--ink);font-weight:600}
   .commission-foot .big{font-family:'Fraunces',serif;font-size:2.4rem;color:var(--red);font-weight:500;line-height:1;display:block;margin-bottom:.3rem}
+  .commissioners{margin-top:clamp(52px,6vw,80px);padding-top:clamp(40px,5vw,60px);border-top:1px solid var(--line)}
+  .cmsr-title{text-align:center;font-family:'Fraunces',serif;font-size:1.5rem;color:var(--ink);font-weight:600}
+  .cmsr-sub{text-align:center;color:var(--muted);font-size:.95rem;margin:.5rem auto 0;max-width:60ch}
+  .cmsr-sub em{font-style:italic}
+  .cmsr-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:.6rem 1.4rem;max-width:940px;margin:clamp(32px,4vw,48px) auto 0}
+  .cmsr{display:flex;align-items:center;gap:.8rem;padding:.55rem .3rem}
+  .cmsr .pic{flex:0 0 44px;width:44px;height:44px;border-radius:50%;overflow:hidden;display:grid;place-items:center;background:linear-gradient(150deg,var(--red-soft),var(--red-dark));color:#fff;font-family:'Fraunces',serif;font-size:.9rem;font-weight:500}
+  .cmsr .pic img{width:100%;height:100%;object-fit:cover;display:block}
+  .cmsr-editor{display:flex;justify-content:center;margin-top:1.7rem}
+  .cmsr-editor .cmsr{background:rgba(200,16,46,.05);border:1px solid var(--line);border-radius:14px;padding:.7rem 1.1rem .7rem .7rem}
+  .cmsr-editor .who span em{font-style:italic}
+  .cmsr .who h4{font-family:'Inter',sans-serif;font-size:.9rem;font-weight:600;color:var(--ink);line-height:1.25}
+  .cmsr .who span{font-size:.8rem;color:var(--muted)}
 
   /* TIMELINE — minimal */
   .tl{max-width:760px;margin:0 auto;display:grid;gap:0}
@@ -152,7 +167,6 @@
 <!-- STATEMENT -->
 <section class="statement">
   <div class="wrap">
-    <p>The care of Alzheimer's is changing fast. This Commission sets out to connect every level of care into <span class="hl">one pathway, built around prevention.</span></p>
     <div class="innov-row">
       <div class="innov">
         <span class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.5"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/></svg></span>
@@ -170,6 +184,7 @@
         <p>A population-scale route to fewer dementias.</p>
       </div>
     </div>
+    <p>The care of Alzheimer's is changing fast. This Commission sets out to connect every level of care into <span class="hl">one pathway, built around prevention.</span></p>
   </div>
 </section>
 
@@ -228,28 +243,53 @@
     </div>
     <div class="lead-grid">
       <div class="lead">
-        <div class="avatar">GF</div>
+        <div class="avatar"><img src="assets/commissioners/frisoni.png" alt="Giovanni B. Frisoni"></div>
         <span class="role">Chair</span>
         <h3>Giovanni B. Frisoni</h3>
         <p class="aff">University of Geneva &amp; Geneva University Hospitals, Switzerland</p>
       </div>
       <div class="lead">
-        <div class="avatar">TG</div>
+        <div class="avatar"><img src="assets/commissioners/gomez-isla.png" alt="Teresa Gómez-Isla"></div>
         <span class="role">Co-chair</span>
         <h3>Teresa Gómez-Isla</h3>
         <p class="aff">Mass General Brigham &amp; Harvard Medical School, USA</p>
       </div>
       <div class="lead">
-        <div class="avatar">PC</div>
+        <div class="avatar"><img src="assets/commissioners/caramelli.png" alt="Paulo Caramelli"></div>
         <span class="role">Co-chair</span>
         <h3>Paulo Caramelli</h3>
         <p class="aff">Federal University of Minas Gerais, Belo Horizonte, Brazil</p>
       </div>
     </div>
-    <div class="commission-foot">
-      <span class="big">23</span>
-      senior researchers join as <strong>Commissioners</strong>, with young researchers encouraged to collaborate.<br>
-      Editor in charge for The Lancet: <strong>Beatriz Gómez-Pérez-Nievas</strong>.
+    <div class="commissioners">
+      <h3 class="cmsr-title">Commissioners</h3>
+      <p class="cmsr-sub">A global body of senior researchers, with young researchers encouraged to collaborate.</p>
+      <div class="cmsr-editor">
+        <div class="cmsr"><span class="pic"><img src="assets/commissioners/beatriz.jpeg" alt="Beatriz Gómez-Pérez-Nievas"></span><div class="who"><h4>Beatriz Gómez-Pérez-Nievas</h4><span>Editor in charge · <em>The Lancet</em></span></div></div>
+      </div>
+      <div class="cmsr-grid">
+        <div class="cmsr"><span class="pic"><img src="assets/commissioners/atri.png" alt="Alireza Atri"></span><div class="who"><h4>Alireza Atri</h4><span>Phoenix, USA</span></div></div>
+        <div class="cmsr"><span class="pic"><img src="assets/commissioners/sevlever.png" alt="Gustavo Sevlever"></span><div class="who"><h4>Gustavo Sevlever</h4><span>Buenos Aires, ARG</span></div></div>
+        <div class="cmsr"><span class="pic"><img src="assets/commissioners/slachevsky.png" alt="Andrea Slachevsky"></span><div class="who"><h4>Andrea Slachevsky</h4><span>Santiago, CHI</span></div></div>
+        <div class="cmsr"><span class="pic"><img src="assets/commissioners/ismail.png" alt="Zahinoor Ismail"></span><div class="who"><h4>Zahinoor Ismail</h4><span>Calgary, CAN</span></div></div>
+        <div class="cmsr"><span class="pic"><img src="assets/commissioners/jack.png" alt="Clifford Jack"></span><div class="who"><h4>Clifford Jack</h4><span>Rochester, USA</span></div></div>
+        <div class="cmsr"><span class="pic"><img src="assets/commissioners/alladi.png" alt="Suvarna Alladi"></span><div class="who"><h4>Suvarna Alladi</h4><span>Bangalore, IND</span></div></div>
+        <div class="cmsr"><span class="pic"><img src="assets/commissioners/jessen.png" alt="Frank Jessen"></span><div class="who"><h4>Frank Jessen</h4><span>Cologne, GER</span></div></div>
+        <div class="cmsr"><span class="pic"><img src="assets/commissioners/frederiksen.png" alt="Kristian Frederiksen"></span><div class="who"><h4>Kristian Frederiksen</h4><span>Copenhagen, DEN</span></div></div>
+        <div class="cmsr"><span class="pic"><img src="assets/commissioners/udeh-momoh.png" alt="Chinedu Udeh-Momoh"></span><div class="who"><h4>Chinedu Udeh-Momoh</h4><span>Nairobi, KEN</span></div></div>
+        <div class="cmsr"><span class="pic"><img src="assets/commissioners/barkhof.png" alt="Frederik Barkhof"></span><div class="who"><h4>Frederik Barkhof</h4><span>London, UK</span></div></div>
+        <div class="cmsr"><span class="pic"><img src="assets/commissioners/banerjee.png" alt="Sube Banerjee"></span><div class="who"><h4>Sube Banerjee</h4><span>Nottingham, UK</span></div></div>
+        <div class="cmsr"><span class="pic"><img src="assets/commissioners/walsh.png" alt="Sebastian Walsh"></span><div class="who"><h4>Sebastian Walsh</h4><span>Cambridge, UK</span></div></div>
+        <div class="cmsr"><span class="pic"><img src="assets/commissioners/largent.png" alt="Emily Largent"></span><div class="who"><h4>Emily Largent</h4><span>Philadelphia, USA</span></div></div>
+        <div class="cmsr"><span class="pic"><img src="assets/commissioners/whelton.png" alt="Paul Whelton"></span><div class="who"><h4>Paul Whelton</h4><span>New Orleans, USA</span></div></div>
+        <div class="cmsr"><span class="pic"><img src="assets/commissioners/cuba-fuentes.png" alt="Maria Sofia Cuba Fuentes"></span><div class="who"><h4>Maria Sofia Cuba Fuentes</h4><span>Lima, PER</span></div></div>
+        <div class="cmsr"><span class="pic"><img src="assets/commissioners/bilbeny.png" alt="Beatriu Bilbeny de Fortuny"></span><div class="who"><h4>Beatriu Bilbeny de Fortuny</h4><span>Barcelona, SPA</span></div></div>
+        <div class="cmsr"><span class="pic"><img src="assets/commissioners/jonsson.png" alt="Linus Jonsson"></span><div class="who"><h4>Linus Jonsson</h4><span>Stockholm, SWE</span></div></div>
+        <div class="cmsr"><span class="pic"><img src="assets/commissioners/babulal.png" alt="Ganesh Babulal"></span><div class="who"><h4>Ganesh Babulal</h4><span>Rochester, USA</span></div></div>
+        <div class="cmsr"><span class="pic"><img src="assets/commissioners/moura.png" alt="Lidia Maria Moura"></span><div class="who"><h4>Lidia Maria Moura</h4><span>Boston, USA</span></div></div>
+        <div class="cmsr"><span class="pic"><img src="assets/commissioners/landeiro.png" alt="Filipa Landeiro"></span><div class="who"><h4>Filipa Landeiro</h4><span>Oxford, UK</span></div></div>
+        <div class="cmsr"><span class="pic"><img src="assets/commissioners/kanavos.png" alt="Panos Kanavos"></span><div class="who"><h4>Panos Kanavos</h4><span>London, UK</span></div></div>
+      </div>
     </div>
   </div>
 </section>
@@ -258,14 +298,14 @@
 <section style="background:var(--paper-2);border-top:1px solid var(--line)">
   <div class="wrap">
     <div class="center-head">
-      <span class="eyebrow">Timeline</span>
+      <span class="eyebrow">Timelines</span>
       <h2>From announcement to final report</h2>
     </div>
     <div class="tl">
-      <div class="tl-row"><div class="tl-when">14 July 2026</div><div class="tl-what"><h3>Announcement &amp; meet-and-greet</h3><p>Introduced at AAIC, London, UK.</p></div></div>
-      <div class="tl-row"><div class="tl-when">TBD 2026</div><div class="tl-what"><h3>Kickoff</h3><p>Inaugural working meeting — date and venue to be defined.</p></div></div>
-      <div class="tl-row"><div class="tl-when">2–5 years</div><div class="tl-what"><h3>The work</h3><p>An ongoing programme, supported by instrumental papers along the way.</p></div></div>
-      <div class="tl-row"><div class="tl-when">Final report</div><div class="tl-what"><h3>Submission to The Lancet</h3><p>The Commission's full findings and recommendations.</p></div></div>
+      <div class="tl-row"><div class="tl-when">14 July 2026</div><div class="tl-what"><h3>Meet-and-greet</h3><p>London, UK, during AAIC.</p></div></div>
+      <div class="tl-row"><div class="tl-when">TBD 2026</div><div class="tl-what"><h3>Announcement and Kickoff</h3><p>Inaugural working meeting — date and venue to be defined.</p></div></div>
+      <div class="tl-row"><div class="tl-when">3–5 years</div><div class="tl-what"><h3>The work</h3><p>An ongoing programme, supported by instrumental papers along the way.</p></div></div>
+      <div class="tl-row"><div class="tl-when">Final report</div><div class="tl-what"><h3>Submission to <em>The Lancet</em></h3><p>The Commission's full findings and recommendations.</p></div></div>
     </div>
   </div>
 </section>
@@ -282,7 +322,6 @@
     </div>
     <div class="brand" style="display:flex"><span class="dot"></span>Lancet Commission · ADRD Pathways</div>
     <p class="tagfoot">Reshaping health systems around prevention.</p>
-    <p class="note">Concept proposal for an upcoming Lancet Commission — content drawn from the Commission concept notes. Details to be confirmed by the Commissioners.</p>
   </div>
 </footer>
 
