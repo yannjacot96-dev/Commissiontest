@@ -74,9 +74,8 @@
   .vision h2{color:#fff;font-size:clamp(2rem,4.2vw,3.1rem);max-width:18ch;margin:1rem auto 0}
   .vision blockquote{font-family:'Fraunces',serif;font-style:italic;font-size:clamp(1.25rem,2.5vw,1.7rem);line-height:1.45;max-width:26ch;margin:1.6rem auto 0;color:#ff9aa9;font-weight:400}
   .vision-figure{max-width:360px;margin:clamp(40px,5vw,60px) auto 0}
-  .vision-figure .shield-placeholder{display:flex;flex-direction:column;align-items:center;justify-content:center;aspect-ratio:1 / 1.05;border:1.5px dashed rgba(255,255,255,.28);border-radius:22px;background:rgba(255,255,255,.04)}
-  .vision-figure .shield-placeholder .ph-title{font-size:.72rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.55)}
-  .vision-figure .shield-placeholder .ph-sub{font-family:'Fraunces',serif;font-style:italic;font-size:1.05rem;color:rgba(255,255,255,.4);margin-top:.55rem}
+  .vision-figure .emblem-plate{background:#fff;border-radius:24px;padding:30px;box-shadow:0 34px 70px -22px rgba(0,0,0,.6)}
+  .vision-figure .emblem-plate img{width:100%;display:block}
   .vision-figure figcaption{font-size:.82rem;color:rgba(255,255,255,.55);margin-top:1.4rem}
 
   /* AIMS — clean numbered list */
@@ -131,7 +130,7 @@
   footer{background:var(--dark);color:rgba(255,255,255,.7);padding:clamp(56px,7vw,80px) 0 40px;text-align:center}
   footer .logo-row{display:flex;flex-wrap:wrap;gap:1.1rem;justify-content:center;align-items:center;margin-bottom:2.6rem}
   footer .logo-chip{background:#fff;border-radius:12px;padding:0 1.5rem;display:grid;place-items:center;height:80px;min-width:172px}
-  footer .logo-chip img{max-height:44px;width:auto}
+  footer .logo-chip img{width:auto;max-width:260px}
   footer .logo-chip.placeholder{background:rgba(255,255,255,.05);border:1.5px dashed rgba(255,255,255,.26);min-width:172px}
   footer .logo-chip.placeholder span{color:rgba(255,255,255,.62);font-size:.72rem;font-weight:700;letter-spacing:.1em;line-height:1.4;text-align:center;text-transform:uppercase}
   footer .logo-chip.placeholder span em{display:block;margin-top:.4rem;font-style:italic;font-weight:500;font-size:.62rem;letter-spacing:.03em;text-transform:none;color:rgba(255,255,255,.45)}
@@ -195,8 +194,7 @@
     <h2>One connected ADRD care pathway</h2>
     <blockquote>Uniting all levels of care to match — and possibly overcome — the success of vascular prevention.</blockquote>
     <figure class="vision-figure">
-      <div class="shield-placeholder"><span class="ph-title">Commission emblem</span><span class="ph-sub">logo to come</span></div>
-      <figcaption>Layered prevention — guarding the brain like vascular medicine guards the heart.</figcaption>
+      <div class="emblem-plate"><img src="assets/commission-emblem.png" alt="Lancet Commission on ADRD — emblem: a tree and brain rising from a shared pathway"></div>
     </figure>
   </div>
 </section>
@@ -315,10 +313,10 @@
   <div class="wrap">
     <p class="logo-label">Convened across</p>
     <div class="logo-row">
-      <div class="logo-chip"><img src="assets/logo-unige.png" alt="University of Geneva"></div>
-      <div class="logo-chip"><img src="assets/logo-harvard.png" alt="Harvard Medical School"></div>
-      <div class="logo-chip"><img src="assets/logo-ufmg.png" alt="Federal University of Minas Gerais"></div>
-      <div class="logo-chip"><img src="assets/logo-lancet.png" alt="The Lancet"></div>
+      <div class="logo-chip"><img src="assets/logo-unige.png" alt="University of Geneva" style="height:56px"></div>
+      <div class="logo-chip"><img src="assets/logo-harvard.png" alt="Harvard Medical School" style="height:47px"></div>
+      <div class="logo-chip"><img src="assets/logo-ufmg.png" alt="Federal University of Minas Gerais" style="height:40px"></div>
+      <div class="logo-chip"><img src="assets/logo-lancet.png" alt="The Lancet" style="height:27px"></div>
     </div>
     <div class="brand" style="display:flex"><span class="dot"></span>Lancet Commission · ADRD Pathways</div>
     <p class="tagfoot">Reshaping health systems around prevention.</p>
